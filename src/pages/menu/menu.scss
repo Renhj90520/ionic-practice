@@ -1,0 +1,23 @@
+page-menu {
+  ion-card {
+    position: relative;
+    text-align: center;
+    margin: 0!important;
+    width: 100%!important;
+  }
+  .card-title {
+      position: absolute;
+      top: 36%;
+      font-size: 2em;
+      width: 100%;
+      font-weight: bold;
+      color: white;
+  }
+  .card-subtitle {
+      font-size: 1em;
+      position: absolute;
+      top: 60%;
+      width: 100%;
+      color: white;
+  }
+}

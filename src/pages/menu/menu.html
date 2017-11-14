@@ -1,0 +1,29 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-card no-padding>
+      <img src="assets/imgs/rock.png" alt="">
+      <div class="card-title">WOOIONIC</div>
+      <div class="card-subtitle">Keep Shopping</div>
+    </ion-card>
+    <ion-list>
+      <ion-item *ngFor="let cate of categories" menuClose text-wrap (click)="openCategoryPage(cate)">
+        <ion-icon item-left [name]="cate.icon"></ion-icon>
+        <h2>{{cate.name}}</h2>
+        <p *ngIf="cate.description">{{cate.description}}</p>
+      </ion-item>
+
+      <ion-item (click)="openPage('signup')">
+        <ion-icon item-left name="md-clipboard"></ion-icon>
+        Sign Up</ion-item>
+      <ion-item (click)="openPage('login')">
+        <ion-icon item-left name="log-in"></ion-icon>
+        Login</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-nav #content [root]="homePage"></ion-nav>
